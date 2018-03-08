@@ -7,7 +7,7 @@ msg = "Hello world"
 bits = str(bin(int.from_bytes(msg.encode(), 'big')))[2:]
 N_bits = len(bits)
 #MAP 0->-1,1->1
-#Format 0bXXXXXX it's why we sky the first 2 element
+#Format 0bXXXXXX it's why we skip the first 2 element
 symbols = list(map(lambda x: 2*int(x)-1,bits))
 
 Fs = 44100
